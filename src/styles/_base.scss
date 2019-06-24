@@ -1,0 +1,39 @@
+:root {
+  --primary: #E53B3B;
+}
+
+h1, h2, h3, h4, h5, body, html, p {
+  margin: 0;
+}
+
+body {
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000d6;
+  padding: 0 40px;
+  height: 100vh;
+  background: hsl(0, 0%, 95%);
+}
+
+@mixin hover-shadow {
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.05);
+  transition-property: transform,box-shadow;
+  transition: .25s cubic-bezier(.215,.61,.355,1);
+
+  &:hover {
+    transform: translateY(0);
+    box-shadow: 0 20px 80px rgba(0,0,0,.1), 0 5px 20px rgba(0,0,0,.05);
+  }
+}
+
+// hiding all the blue focus borders
+* :focus {
+  outline: 0;
+}
+
+// hiding scrollbars
+::-webkit-scrollbar { 
+  display: none !important; 
+}
+
